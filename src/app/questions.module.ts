@@ -1,5 +1,6 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { FileSizePipe } from './filesize.pipe';
 import { Question1Component } from './question1.component';
 import { Question2Component } from './question2.component';
@@ -10,7 +11,7 @@ import { Question6Component } from './question6.component';
 import { QuestionsComponent } from './questions.component';
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, HttpClientModule],
   declarations: [
     QuestionsComponent,
     Question1Component,
