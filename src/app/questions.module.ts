@@ -14,9 +14,8 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-  imports: [CommonModule, HttpClientModule, FormsModule],
+  imports: [CommonModule, HttpClientModule, FormsModule, NgbModule],
   declarations: [
-    NgbModule,
     QuestionsComponent,
     Question1Component,
     Question2Component,
