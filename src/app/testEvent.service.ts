@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
-
+export interface User {
+  id: number;
+  name: string;
+}
 @Injectable()
 export class TesteventService {
   public isLoggedIn = false;

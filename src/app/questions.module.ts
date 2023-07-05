@@ -11,10 +11,12 @@ import { Question6Component } from './question6.component';
 import { QuestionsComponent } from './questions.component';
 import { TestRouterComponent } from './router.component';
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [CommonModule, HttpClientModule, FormsModule],
   declarations: [
+    NgbModule,
     QuestionsComponent,
     Question1Component,
     Question2Component,
