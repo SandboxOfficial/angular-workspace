@@ -5,7 +5,7 @@ import { FileSizePipe } from './filesize.pipe';
 
 @Component({
   selector: 'question2',
-  template: ` <h3>Q2. How to supress the below error without instantiating the below service</h3>
+  template: ` <h5>Q2. How to supress the below error without instantiating the below service</h5>
   
   `,
 })

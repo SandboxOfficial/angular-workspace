@@ -6,8 +6,8 @@ import { TesteventService } from './testEvent.service';
 @Component({
   selector: 'question33',
   template: ` 
-    <h3>Q3.How do we subscribe to an Observable in HTML template rather than using subscribe</h3>
-    <p> print the name of the users using getusers method in TesteventService </p>
+    <h5>Q3.How do we subscribe to an Observable in HTML template rather than using subscribe</h5>
+    <p> Print the name of the users using getusers method in TesteventService </p>
   `,
   providers: [TesteventService],
 })

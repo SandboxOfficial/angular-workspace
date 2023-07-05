@@ -9,7 +9,7 @@ export interface User {
 }
 @Component({
   selector: 'question5',
-  template: ` <h3>Q5. What is best practice to remove duplicate/redundant API request</h3>
+  template: ` <h5>Q5. What is best practice to remove duplicate/redundant API request</h5>
   <p>{{countertext}}</p>
   `,
 })

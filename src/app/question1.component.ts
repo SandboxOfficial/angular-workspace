@@ -13,7 +13,8 @@ interface File {
 
 @Component({
   selector: 'question1',
-  template: ` <h3>Convert the FileSize from bytes to megabytes and append the extension (MB) </h3>
+  template: ` <h5>Convert the FileSize from bytes to megabytes and append the extension (MB) </h5>
+  <br>
     <table>
       <tr>
         <th>Name</th>

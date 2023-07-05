@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'questions',
-  template: ` <h3>Choose a question </h3>
+  template: ` <label>Choose a question </label> 
+  <br>
   <select   (change)="updatQues($event)">
   <option  *ngFor="let option of options" value= "{{option}}"> Question {{option}}</option></select>
   <ng-container [ngSwitch]="qNum">
+  <br> <br>
   <question1 *ngSwitchCase="'1'"></question1>
   <question2 *ngSwitchCase="'2'"></question2>
   <question33 *ngSwitchCase="'3'"></question33>
