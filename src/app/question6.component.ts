@@ -1,7 +1,7 @@
 /**QUESTION: How to implement Typeahead search text box which triggers subscription after 3char keyed. Also make sure canceling effects and avoiding nested Subscriptions **/
 
 import { Component } from '@angular/core';
-import { debounceTime, map, Observable } from 'rxjs';
+import { debounceTime, map, Observable, tap } from 'rxjs';
 import { User, TesteventService } from './testEvent.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { User, TesteventService } from './testEvent.service';
   <ng-template #rt let-r="result" let-t="term">
   <ngb-highlight [result]="r.name" [term]="t"></ngb-highlight>
   </ng-template>
-  <label for="typeahead-template">Search user:</label>  {{search}}
+  <label for="typeahead-template">Search user:</label> 
   <input id="typeahead-template" type="text" class="form-control"[(ngModel)]="model" #ctrl="ngModel"  [ngbTypeahead]="search" [resultTemplate]="rt"
     [inputFormatter]="formatter" />
   `,
@@ -24,14 +24,13 @@ export class Question6Component {
   search = (text$: Observable<string>) =>
     text$.pipe(
       debounceTime(1000),
-      map((term: string) => {
-        this.typeterm = term;
+      map((term: string) =>
         term.length > 2
           ? this.testService.users.filter((user: User) =>
               user.name.includes(term)
             )
-          : [];
-      })
+          : []
+      )
     );
 
   formatter = (x: { name: string }) => x.name;
