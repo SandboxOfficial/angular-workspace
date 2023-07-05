@@ -9,9 +9,11 @@ import { Question4Component } from './question4.component';
 import { Question5Component } from './question5.component';
 import { Question6Component } from './question6.component';
 import { QuestionsComponent } from './questions.component';
+import { TestRouterComponent } from './router.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [CommonModule, HttpClientModule],
+  imports: [CommonModule, HttpClientModule, FormsModule],
   declarations: [
     QuestionsComponent,
     Question1Component,
@@ -20,6 +22,7 @@ import { QuestionsComponent } from './questions.component';
     Question4Component,
     Question5Component,
     Question6Component,
+    TestRouterComponent,
     FileSizePipe,
   ],
   exports: [
@@ -30,6 +33,7 @@ import { QuestionsComponent } from './questions.component';
     Question4Component,
     Question5Component,
     Question6Component,
+    TestRouterComponent,
   ],
 })
 export class QuestionsModule {}

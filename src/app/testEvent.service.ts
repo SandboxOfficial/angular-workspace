@@ -3,6 +3,7 @@ import { of } from 'rxjs';
 
 @Injectable()
 export class TesteventService {
+  public isLoggedIn = false;
   private users = [
     {
       id: 1,
