@@ -16,7 +16,7 @@ import { Component } from '@angular/core';
   `,
 })
 export class QuestionsComponent {
-  qNum = 6;
+  qNum = 1;
   options = [1, 2, 3, 4, 5, 6];
   updatQues = (event: any): any => {
     this.qNum = event.target.value;

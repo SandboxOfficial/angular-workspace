@@ -1,8 +1,8 @@
 /**QUESTION: How to implement Typeahead search text box which triggers subscription after 3char keyed. Also make sure canceling effects and avoiding nested Subscriptions **/
 
 import { Component } from '@angular/core';
-import { map, Observable, tap } from 'rxjs';
-import { User, TesteventService } from './testEvent.service';
+import { map, Observable, switchMap, filter } from 'rxjs';
+import { TesteventService } from './testEvent.service';
 
 @Component({
   selector: 'question6',
@@ -13,7 +13,7 @@ import { User, TesteventService } from './testEvent.service';
   <label for="typeahead-template">Search user:</label> {{hint}} 
   <input id="typeahead-template" type="text" class="form-control"[(ngModel)]="model" #ctrl="ngModel"  [ngbTypeahead]="search" [resultTemplate]="rt"
     [inputFormatter]="formatter" />
-    <p>Keyup regular : {{typeterm}}</p>
+    <p>Keyup regular : {{model}}</p>
     <p>Keyup Delayed : {{typeterm}}</p>
   `,
   providers: [TesteventService],
@@ -26,16 +26,17 @@ export class Question6Component {
 
   search = (text$: Observable<string>) =>
     text$.pipe(
-      map((term: string) => {
-        this.typeterm = term;
-        if (term.length > 2) {
-          return this.testService.users.filter((user: User) =>
-            user.name.includes(term)
+      filter((val) => val.length > 2),
+      switchMap((typedValue: string) => {
+        this.hint = `switchMap typedValue -> ${typedValue}`;
+        this.typeterm = typedValue;
+        return this.testService
+          .getUsers()
+          .pipe(
+            map((users) =>
+              users.filter((user) => user.name.includes(typedValue))
+            )
           );
-        } else {
-          this.hint = 'Type atleast 3char';
-          return [];
-        }
       })
     );
 
