@@ -7,7 +7,7 @@ export interface User {
 @Injectable()
 export class TesteventService {
   public isLoggedIn = false;
-  private users = [
+  public users = [
     {
       id: 1,
       name: 'john doe',
