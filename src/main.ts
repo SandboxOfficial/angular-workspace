@@ -9,8 +9,8 @@ import { QuestionsModule } from './app/questions.module';
   standalone: true,
   imports: [CommonModule, QuestionsModule],
   template: `
-    <h1>{{name}} Workspcae!</h1>
-    <questions></questions>
+   <div class="col-md-12"> <h1>{{name}} Workspcae!</h1>
+   <questions></questions></div>
   `,
 })
 export class App {

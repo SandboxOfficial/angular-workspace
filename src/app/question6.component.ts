@@ -2,7 +2,15 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { map, Observable, switchMap, of, filter, debounceTime } from 'rxjs';
+import {
+  map,
+  Observable,
+  switchMap,
+  of,
+  filter,
+  debounceTime,
+  tap,
+} from 'rxjs';
 import { TesteventService } from './testEvent.service';
 export interface User {
   firstName: string;
@@ -10,7 +18,8 @@ export interface User {
 }
 @Component({
   selector: 'question6',
-  template: ` <h5>Q6.How to implement Typeahead search text box which triggers subscription after 3char keyed.  </h5>
+  template: ` <h5>Q6.Below is the Typeahead search text box which triggers subscription after every char keyed.  
+  Delay & Trigger the subscription after 3char keyed-in.</h5>
   <ng-template #rt let-r="result" let-t="term">
   <ngb-highlight [result]="r.firstName+' '+r.lastName" [term]="t"></ngb-highlight>
   </ng-template>
@@ -40,8 +49,6 @@ export class Question6Component {
 
   search = (text$: Observable<string>) =>
     text$.pipe(
-      debounceTime(500),
-      filter((val) => val.length > 2),
       switchMap((typedValue: string) => {
         this.typeterm = typedValue;
         return this.getUsers().pipe(
