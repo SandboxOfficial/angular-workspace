@@ -12,6 +12,8 @@ import { QuestionsComponent } from './questions.component';
 import { TestRouterComponent } from './router.component';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Question7Component } from './question7.component';
+import { ChildComponent } from './child.component';
 
 @NgModule({
   imports: [CommonModule, HttpClientModule, FormsModule, NgbModule],
@@ -23,7 +25,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     Question4Component,
     Question5Component,
     Question6Component,
+    Question7Component,
     TestRouterComponent,
+    ChildComponent,
     FileSizePipe,
   ],
   exports: [
@@ -34,6 +38,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     Question4Component,
     Question5Component,
     Question6Component,
+    Question7Component,
+    ChildComponent,
     TestRouterComponent,
   ],
 })
