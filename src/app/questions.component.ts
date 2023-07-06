@@ -2,11 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'questions',
-  template: ` 
-  <div class="d-flex"><label>Choose a question </label>   
+  template: ` <label class="form-label">Choose a question </label>   
    <select class="form-control" (change)="updatQues($event)">
   <option  *ngFor="let option of options" value= "{{option}}"> Question {{option}}</option></select>
-  </div>
   <ng-container [ngSwitch]="qNum">
   <br> <br>
   <question1 *ngSwitchCase="'1'"></question1>

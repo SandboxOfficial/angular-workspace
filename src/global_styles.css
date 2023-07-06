@@ -31,4 +31,6 @@ label {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
 }
-  
+.form-label {
+  margin-bottom: 0.5rem;
+}
