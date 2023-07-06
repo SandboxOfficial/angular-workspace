@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { FileSizePipe } from './filesize.pipe';
 import { Question1Component } from './question1.component';
 import { Question2Component } from './question2.component';
 import { Question3Component } from './question3.component';
@@ -28,7 +27,6 @@ import { ChildComponent } from './child.component';
     Question7Component,
     TestRouterComponent,
     ChildComponent,
-    FileSizePipe,
   ],
   exports: [
     QuestionsComponent,

@@ -3,7 +3,6 @@ Example: 209715200 bytes to 200MB
 **/
 
 import { Component } from '@angular/core';
-import { FileSizePipe } from './filesize.pipe';
 
 interface File {
   name: string;
@@ -24,11 +23,10 @@ interface File {
       <tr *ngFor="let file of files">
         <td>{{file.name}}</td>
         <td>{{ file.size }}</td>
-        <td>{{file.size | filesize }}</td>
+        <td>{{ file.size }}</td>
       </tr>
   </table>
   `,
-  providers: [FileSizePipe],
 })
 export class Question1Component {
   files: File[] = [
@@ -36,5 +34,4 @@ export class Question1Component {
     { name: 'banner.jpg', size: 18029, type: 'image/jpg' },
     { name: 'background.png', size: 1784562, type: 'image/png' },
   ];
-  constructor(fileSize: FileSizePipe) {}
 }

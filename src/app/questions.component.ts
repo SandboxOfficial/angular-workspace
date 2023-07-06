@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   <ng-container [ngSwitch]="qNum">
   <br> <br>
   <question1 *ngSwitchCase="'1'"></question1>
-  <question2 *ngSwitchCase="'2'"></question2>
+  <question22 *ngSwitchCase="'2'"></question22>
   <question33 *ngSwitchCase="'3'"></question33>
   <question4 *ngSwitchCase="'4'"></question4>
   <question5 *ngSwitchCase="'5'"></question5>

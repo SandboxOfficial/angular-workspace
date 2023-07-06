@@ -2,7 +2,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { tap, map, shareReplay, Observable } from 'rxjs';
+import { tap, map, Observable } from 'rxjs';
 
 export interface User {
   login: string;
