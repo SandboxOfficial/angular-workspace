@@ -12,12 +12,12 @@
 
 4. Routing
 
-   4.a How to achieve Lazy Loading in angular
-
-   4.b For above generated lazy loaded module, restrict user without no access and re-route him to default Module.
-
-   4.c Pass a Title to Angular routed components (eg. UserDetailComponent)
+   4.a. On click of above button please route to TestRouterComponent which is in router.component.ts using angular router
+   4 b. Please use query params to pass ‘routingData‘ and display the same at TestRouterComponent.
+   4 c. Route the user between TestRouterComponent and NoAccessComponent respectively based on ‘isLoggedIn’ input. Please Make sure to use AuthGuards in routes.
 
 5. What is best practice to remove duplicate/redundant API requests?
 
-6. How to implement Typeahead search text box which triggers subscription after 3char keyed. Also make sure canceling effects and avoiding nested Subscriptions
+6. Display the heading h3 text in child component by calling the child component toggleText method and by passing true directly in this component and not using any service.
+
+7. Below is the Typeahead search text box which triggers subscription after every char keyed. Delay & trigger the subscription after 3char keyed-in

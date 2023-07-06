@@ -10,8 +10,7 @@ export interface User {
 }
 @Component({
   selector: 'question7',
-  template: ` <h5>Q7. Below is the Typeahead search text box which triggers subscription after every char keyed.  
-  Delay & Trigger the subscription after 3char keyed-in.</h5>
+  template: ` <h5>Q7. Below is the Typeahead search text box which triggers subscription after every char keyed. Delay & trigger the subscription after 3char keyed-in</h5>
   <ng-template #rt let-r="result" let-t="term">
   <ngb-highlight [result]="r.firstName+' '+r.lastName" [term]="t"></ngb-highlight>
   </ng-template>
